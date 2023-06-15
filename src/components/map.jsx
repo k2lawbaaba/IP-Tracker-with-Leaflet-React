@@ -127,6 +127,7 @@ return<div className='map' id='map'>
              type="text" 
              value={userEnteredIP}
              onChange={handleUSerIP}
+             autoFocus
               />
             <button type="submit" onClick={dealWithUserInput}><KeyboardArrowRightIcon sx={{paddingTop:"10px", borderRadius:"50px", width:"20px" }} fontSize="medium"/></button>
             </div>
