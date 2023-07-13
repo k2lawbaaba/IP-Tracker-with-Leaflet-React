@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { MapContainer, TileLayer,Popup, Marker, ZoomControl } from 'react-leaflet'
+import { MapContainer, TileLayer,ZoomControl } from 'react-leaflet'
 import { Icon } from 'leaflet'
 import 'leaflet/dist/leaflet.css';
 import KeyboardArrowRightIcon   from '@mui/icons-material/KeyboardArrowRight';
