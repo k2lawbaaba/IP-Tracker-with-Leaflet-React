@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/IP-Tracker-with-Leaflet-React/static/css/main.59a09673.css",
-    "main.js": "/IP-Tracker-with-Leaflet-React/static/js/main.c3944a97.js",
+    "main.js": "/IP-Tracker-with-Leaflet-React/static/js/main.1e6cdf62.js",
     "static/media/pattern-bg-desktop.png": "/IP-Tracker-with-Leaflet-React/static/media/pattern-bg-desktop.5013c4f570ecf757f855.png",
     "static/media/location.png": "/IP-Tracker-with-Leaflet-React/static/media/location.acdc7f588911e9033536.png",
     "index.html": "/IP-Tracker-with-Leaflet-React/index.html",
     "main.59a09673.css.map": "/IP-Tracker-with-Leaflet-React/static/css/main.59a09673.css.map",
-    "main.c3944a97.js.map": "/IP-Tracker-with-Leaflet-React/static/js/main.c3944a97.js.map"
+    "main.1e6cdf62.js.map": "/IP-Tracker-with-Leaflet-React/static/js/main.1e6cdf62.js.map"
   },
   "entrypoints": [
     "static/css/main.59a09673.css",
-    "static/js/main.c3944a97.js"
+    "static/js/main.1e6cdf62.js"
   ]
 }
