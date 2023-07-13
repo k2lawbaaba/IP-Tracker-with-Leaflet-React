@@ -77,11 +77,18 @@ const Mapping=(prop)=>{
                setMessage("Incorrect IP address or Domain name");
         }
         
-        const result = await fetch(url);
-        const data= await result.json();
+        const {error, result} = await fetch(url);
+        if(error){
+        setMessage("IP address or Domain name is not an ISP");
+
+        }
+        else{
+          const data= await result.json();
         setLocate(data);
         updateMap(data.location.lat, data.location.lng);
         setMessage('');
+        }
+        
         
       } catch (error) {
         console.error(error);
