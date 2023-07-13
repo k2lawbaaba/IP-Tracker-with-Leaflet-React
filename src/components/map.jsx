@@ -83,7 +83,7 @@ const Mapping=(prop)=>{
 
         }
         else{
-          const data= await result.json();
+        const data= await result.json();
         setLocate(data);
         updateMap(data.location.lat, data.location.lng);
         setMessage('');
@@ -96,9 +96,6 @@ const Mapping=(prop)=>{
 
       }
     }
- 
-    
-
     //creating icon for marker on the map
     const customIcon = new Icon({
         iconUrl: require('../images/location.png'),
@@ -135,7 +132,7 @@ return<div className='map' id='map'>
             <form onSubmit={dealWithUserInput}>
             <div className="searchBar">
             <input 
-             placeholder="Search for an IP address"
+             placeholder="Search for an IP address or Domain"
              type="text" 
              value={userEnteredIP}
              onChange={handleUSerIP}
