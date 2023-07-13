@@ -8,7 +8,7 @@ const header=(prop)=>{
         <h3>IP address Tracker</h3>
             <form action="">
             <div className="searchBar">
-            <input placeholder="Search for an IP..." type="text" />
+            <input placeholder="Search for an IP or domain..." type="text" />
             <button type="submit"><KeyboardArrowRightIcon sx={{paddingTop:"10px", borderRadius:"50px", width:"20px" }} fontSize="medium"/></button>
             </div>
             </form>
