@@ -12,7 +12,11 @@ const header = (prop) => {
           <input placeholder="Search for an IP or domain..." type="text" />
           <button type="submit">
             <KeyboardArrowRightIcon
-              sx={{ paddingTop: "10px", borderRadius: "50px", width: "22px" }}
+              sx={{
+                paddingTop: "10px",
+                borderRadius: "50px",
+                width: "45px",
+              }}
               fontSize="medium"
             />
           </button>

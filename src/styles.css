@@ -50,12 +50,17 @@ input{
     border-right: 1px solid grey;
     cursor: pointer;
   }
-
+input:hover{
+  font-size: 1.2rem;
+}
+button:hover{
+  transform: scale(1.2);
+  background-color: #ff0051;
+}
 .header button{
     border: none;
-    background-color: none;
-    width: 46px;
-    /* height: 30px; */
+    width: 48px;
+    height: 42px;
     display: inline-block;
     border-radius: 0 10px 0 0;
     padding-right: 5px;
@@ -79,7 +84,7 @@ input{
     margin: 0 auto;
 }
 .infoTray:hover{
-  background-color: rgb(151, 244, 215);
+  background-color: rgb(206, 241, 230);
 }
 .details{
     display: inline-block;
@@ -91,12 +96,12 @@ p{
     margin: 0 auto .2rem;
 }
 /*  */
-#map{
-    height: 70vmax;
-    position: relative;
-}
+/* #map{
+    /* height: 60vmax; */
+    /* position: relative; */
+/* } */
 .leaflet-container{
-    height: 70vmax;
+    height: 100vh;
     position: relative;
     z-index: 0;          
 }
@@ -107,31 +112,70 @@ p{
   font-family: Georgia, 'Times New Roman', Times, serif;
   
 }
-@media(max-width: 880px){
 
-    .infoTray{
-    flex-direction: column;   
-    flex-wrap: wrap;
-    text-align: center;
-    width: 15rem;
-    display: inline-block;
-    margin-top: 10px;
-    }
-    hr{
-        display: none;
-    }
-    .searchBar
-    {
+ @media(max-width: 1000px) {
+
+   .infoTray {
+     flex-direction: column;
+     flex-wrap: wrap;
+     text-align: center;
+     width: 19rem;
+     display: inline-block;
+     margin-top: 10px;
+     height: 15rem;
+     
+
+   }
+ 
+
+   hr {
+     display: none;
+   }
+
+   .searchBar {
+     width: 19rem;
+   }
+
+   input {
+     width: 16rem;
+     font-size: 0.7rem;
+   }
+
+   .details {
+     display: block;
+     text-align: center;
+     margin-top: 10px;
+    padding: .3rem 0;
+   }
+
+ }
+ /* @media(max-width: 600px) {
+
+   .infoTray {
+     flex-direction: column;
+     flex-wrap: wrap;
+     text-align: center;
+     width: 15rem;
+     display: inline-block;
+     margin-top: 10px;
+   }
+
+   hr {
+     display: none;
+   }
+
+   .searchBar {
      width: 15.3rem;
-    }
-    input{
+   }
+
+   input {
      width: 12.3rem;
      font-size: 0.7rem;
-    }
-    .details{
-        display:block;
-        text-align: center;
-        margin-top: 10px;
-    }
-}
- 
+   }
+
+   .details {
+     display: block;
+     text-align: center;
+     margin-top: 10px;
+   }
+ } */

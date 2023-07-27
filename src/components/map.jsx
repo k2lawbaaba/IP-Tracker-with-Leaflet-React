@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { MapContainer, TileLayer, ZoomControl } from "react-leaflet";
+import { MapContainer, TileLayer } from "react-leaflet";
 import { Icon } from "leaflet";
 import "leaflet/dist/leaflet.css";
-import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import Details from "./Details";
-import { publicIpv4 } from "public-ip";
 import Markerposition from "./Markerposition";
 import Card from "./Card";
 
@@ -12,32 +10,17 @@ const Mapping = (prop) => {
   const [cord, setCord] = useState([0, 0]);
   const [userEnteredIP, setUserIP] = useState("");
   const [locate, setLocate] = useState(null);
-  const [hostIPAddress, setIHostIP] = useState("");
+  // const [hostIPAddress, setIHostIP] = useState("");
   const [warningMsg, setMessage] = useState("");
-
-  // Getting the IP address of the host system
-  useEffect(() => {
-    try {
-      const hostIp = async () => {
-        const p = await publicIpv4();
-        setIHostIP(p);
-      };
-      hostIp();
-    } catch (error) {
-      console.error("Error: " + error);
-      // setMessage()
-    }
-  });
 
   //Using regex to check for valid IP address and domain name
   const ipAddressRegex = /^(\d{1,3}\.){3}\d{1,3}$/;
   const domainRegex =
     /^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9](?:\.[a-zA-Z]{2,})+/;
-  // const domainRegex = /^(?!:\/\/)([a-zA-Z0-9-_]+\.)+[a-zA-Z]{2,}$/;
 
   useEffect(() => {
     // var url = `https://geo.ipify.org/api/v2/country,city?apiKey=${process.env.REACT_APP_API_KEY}&ipAddress=${hostIPAddress}`;
-    var url = `https://geo.ipify.org/api/v2/country,city?apiKey=at_1cmt960kfuHcrXsjjLfS2qbR9Ncuh&ipAddress=${hostIPAddress}`;
+    var url = `https://geo.ipify.org/api/v2/country,city?apiKey=at_1cmt960kfuHcrXsjjLfS2qbR9Ncuh&ipAddress=`;
     try {
       const loadData = async () => {
         const result = await fetch(url);
@@ -54,7 +37,7 @@ const Mapping = (prop) => {
     } catch (error) {
       console.error(error);
     }
-  }, [hostIPAddress]);
+  }, []);
 
   const grabDataFromAPI = async () => {
     var url = "";
@@ -99,7 +82,7 @@ const Mapping = (prop) => {
     }
   };
 
-  //dealing withh user query
+  //dealing with user query
   const handleUSerIP = (evt) => setUserIP(evt.target.value);
 
   //Deal with user input or query
@@ -129,14 +112,7 @@ const Mapping = (prop) => {
                   type="submit"
                   onClick={dealWithUserInput}
                 >
-                  <KeyboardArrowRightIcon
-                    sx={{
-                      paddingTop: "10px",
-                      borderRadius: "50px",
-                      width: "20px",
-                    }}
-                    fontSize="medium"
-                  />
+                  {">"}
                 </button>
               </div>
             </form>
@@ -168,7 +144,7 @@ const Mapping = (prop) => {
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <ZoomControl position="bottomright" />
+            {/* <ZoomControl position="bottomright" /> */}
 
             <Markerposition
               cord={cord}
